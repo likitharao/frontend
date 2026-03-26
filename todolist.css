@@ -1,0 +1,100 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body
+{
+    height:100vh;
+    background-image: url(todolist.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:40px;
+    
+   
+}
+.myapp
+{
+    height:45vh;
+    width: 25vw;
+    background-color:blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius:5px;
+    padding:20px;
+    gap:15px;
+}
+
+.alltasks h1
+{
+    color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    
+    padding-bottom:40px;
+    text-decoration: underline;
+}
+.adding
+{
+   margin-top: 30px;
+   text-align: center;
+   
+} 
+.adding .task
+{
+    border-radius: 5px;
+    height:25px;
+}
+.btn
+{
+    background-color: green;
+    border-radius: 5px;
+    height:25px;
+    width:4vw;
+
+}
+.delete-btn
+{
+    width:4vw;
+    border-radius:5px;
+    background-color: red;
+    color:black;
+    border: none;
+}
+.adding #duedate
+{ 
+  border-radius:5px;
+}
+.all-filters
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.all-filters #all
+{
+    border-radius: 5px;
+    width:3vw;
+}
+.all-filters #active
+{
+    border-radius: 5px;
+    
+}
+.all-filters #completed
+{
+    border-radius: 5px;
+    
+}
+.completed
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
