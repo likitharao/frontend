@@ -16,18 +16,21 @@ function displayTasks()
 {
   tasklist.innerHTML = ""; 
 
-  allTasks.forEach(function(task, index) {
+  allTasks.forEach(function(task, index) 
+  {
 
     let taskItem = document.createElement("div");
     taskItem.innerText = task.text;
 
     
-    if (task.completed) {
+    if (task.completed) 
+        {
       taskItem.classList.add("completed");
     }
 
     
-    taskItem.addEventListener("click", function() {
+    taskItem.addEventListener("click", function()
+     {
       task.completed = !task.completed; 
       localStorage.setItem("tasks", JSON.stringify(allTasks));
       displayTasks(); 
@@ -37,7 +40,8 @@ function displayTasks()
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Delete";
 
-    deleteBtn.addEventListener("click", function(event) {
+    deleteBtn.addEventListener("click", function(event) 
+    {
       event.stopPropagation(); 
 
      
@@ -60,18 +64,21 @@ displayTasks();
 
 
 
-button.addEventListener("click", function() {
+button.addEventListener("click", function()
+ {
 
   let tasktext = input.value;
 
-  if (tasktext.trim() === "") {
+  if (tasktext.trim() === "")
+     {
     alert("Enter a task");
     return;
   }
 
   allTasks.push({
-    text: tasktext,
-    completed: false
+    completed: false,
+    text: tasktext
+    
   });
 
   localStorage.setItem("tasks", JSON.stringify(allTasks));
@@ -83,7 +90,8 @@ button.addEventListener("click", function() {
 
 
 
-allBtn.addEventListener("click", function() {
+allBtn.addEventListener("click", function() 
+{
   let tasks = document.querySelectorAll(".task-list div");
 
   tasks.forEach(function(task) {
@@ -105,7 +113,8 @@ activeBtn.addEventListener("click", function() {
 });
 
 
-completeBtn.addEventListener("click", function() {
+completeBtn.addEventListener("click", function()
+ {
   let tasks = document.querySelectorAll(".task-list div");
 
   tasks.forEach(function(task) 
